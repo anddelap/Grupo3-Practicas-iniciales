@@ -1,0 +1,37 @@
+
+<article class="articulo">
+    <p class="tit">Registro</p>
+    <div class="divi">
+        <p class="subtitulo">Usuario</p>
+        <input [formControl]="usuario" type="text" id="usuario">
+        <br>
+        <br>
+        <p class="subtitulo">Nombres</p>
+        <input [formControl]="Nombres" type="text" id="Nombres">
+        <br>
+        <br>
+        <p class="subtitulo">Apellidos</p>
+        <input [formControl]="Apellidos" type="text" id="Apellidos">
+        <br>
+        <br>
+        <p class="subtitulo">Fecha de nacimiento</p>
+        <input [formControl]="Fecha" type="date" id="Fecha">
+        <br>
+        <br>
+        <p class="subtitulo">Correo electrónico</p>
+        <input [formControl]="Correo" type="text" id="Correo">
+        <br>
+        <br>
+        <p class="subtitulo">Password</p>
+        <input [formControl]="Password" type="password" name="Password">
+        <br> 
+        <br>
+        <p class="subtitulo">Biografia</p>
+        <input [formControl]="Biografia" type="text" id="Biografia">
+        <br>
+        <br>
+        <li><a (click)="registrar()">Iniciar Sesion</a></li>
+        <br>
+        <br>
+    </div>
+</article>
