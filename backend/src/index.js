@@ -31,7 +31,7 @@ app.use(express.json());
 app.use(require('./routers/index'));
 app.use(require('./routers/InicioSesion'));
 app.use(require('./routers/Registro'));
-app.use(require('./routers/prueba'));
+app.use(require('./routers/NuevaContraseña'));
 
 app.listen(app.get('port'), (err) =>{
     console.log("Server running on port " + app.get('port'));
