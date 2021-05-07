@@ -1,6 +1,7 @@
 const { Router } = require('express');
 const router = Router();
-
+import DatoJuego from './clasePrueba.js';
+import JuegDisponibles from './listadoJuegos.js';
 // CREATE A CONNECTION TO THE DATABASE
 var mysql = require('mysql');
 var connection = mysql.createConnection({
@@ -72,6 +73,15 @@ router.get('/CargarModelo', function(req, res) {
         foreign key(idUsuario) references Usuario(idUsuario),\
         foreign key(idPublicacion) references Publicacion(idPublicacion)\
     );";
+
+    //RECORRER EL ARRAY DE JUEGOS E INSERTAR CADA UNO EN LA BD SI ALGUIEN PUEDE VER SI ME FUNCIONA ESTE CODIGO O DEBO ARREGLARLO ME AVISA PORFA NO SE MUCHO DE JS.
+
+    for (i=0; i < JuegDisponibles.length; i++) {
+        
+        "INSERT INTO Juego (nombre, descripcion, cartucho, fecha, idConsola)\
+        VALUES (" + JuegDisponibles[i].getNombre() + "," +  JuegDisponibles[i].getDescripcion() + " , " + JuegDisponibles[i].getCartucho(), ", " + (JuegDisponibles[i].getFecha()).toString() + ", " + (JuegDisponibles[i].getConsola()).toString() + ");" ;
+        }
+
 
     var consulta = connection.query(sql, (err, result) => {
         if(err){
