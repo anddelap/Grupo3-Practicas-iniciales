@@ -32,6 +32,10 @@ app.use(require('./routers/index'));
 app.use(require('./routers/InicioSesion'));
 app.use(require('./routers/Registro'));
 app.use(require('./routers/NuevaContraseña'));
+app.use(require('./routers/editarJuego'));
+app.use(require('./routers/RegistroJuego'));
+app.use(require('./routers/eliminarJuego'));
+app.use(require('./routers/getJuego'));
 
 app.listen(app.get('port'), (err) =>{
     console.log("Server running on port " + app.get('port'));
