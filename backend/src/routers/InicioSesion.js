@@ -23,9 +23,9 @@ router.get('/CargarModelo', function(req, res) {
     var sql2 = "create table Juego(\
         idJuego int auto_increment not null,\
         nombre varchar(45),\
-        descripcion varchar(45),\
-        cartucho varchar(45),\
-        fecha date,\
+        descripcion varchar(445),\
+        cartucho varchar(245),\
+        fecha int,\
         idConsola int not null,\
         primary key(idJuego),\
         foreign key(idConsola) references Consola(idConsola)\
