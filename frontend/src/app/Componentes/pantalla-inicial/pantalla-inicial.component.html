@@ -1,0 +1,34 @@
+<div class="col-md-4 offset-md-2">
+    <div class="card">
+      <div class="card-body">
+        <form action="">
+          <div class="form-group">
+            <input type="text" name="fecha" [(ngModel)]="Juego.fecha" placeholder="Fecha" class="form-control" autofocus>
+          </div>
+          <div class="form-group">
+            <input type="text" name="usuario" [(ngModel)]="usuario.Usuario" placeholder="Usuario" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="titulo" [(ngModel)]="Juego.nombre" placeholder="Título del juego" class="form-control">
+          </div>
+          <div class="form-group">
+            <textarea name="descripcion" [(ngModel)]="Juego.descripcion" rows="2" placeholder="Descripcion del juego" class="form-control"></textarea>
+          </div>
+          <br>
+          <button class="btn btn-dark btn-block">
+            Guardar
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-4">
+    <div class="card card-body text-center">
+      <h3>{{Juego.nombre == '' ? 'Título del Juego' : Juego.nombre}}</h3>
+      <p>{{Juego.descripcion == '' ? 'Escribe la descripcion' : Juego.descripcion}}</p>
+      <p>{{Juego.fecha | date: 'yyyy-MM-dd'}}</p>
+    </div>
+  </div>
+
+  
